@@ -36,6 +36,6 @@ public class AdministratorService {
 	 * @return 管理者情報
 	 */
 	public Administrator login(String mailAddress,String password) {
-		return administratorRepository.findByMaidAddressAndPassword(mailAddress, password);
+		return administratorRepository.findByMaidAddressAndPassword(mailAddress,password);
 	}
 }

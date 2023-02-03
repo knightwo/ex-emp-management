@@ -52,9 +52,9 @@ public class AdministratorRepository {
 	 * @param password   照合したいパスワード
 	 * @return 管理者情報(検索されなかった場合はnullを返します)
 	 */
-	public Administrator findByMaidAddressAndPassword(String mailAddres, String password) {
+	public Administrator findByMaidAddressAndPassword(String mailAddress, String password) {
 		String sql = "SELECT id,name,mail_address,password FROM administrators WHERE mail_address = :mailAddress AND password = :password;";
-		SqlParameterSource param = new MapSqlParameterSource().addValue("mailAddres", mailAddres).addValue("password",
+		SqlParameterSource param = new MapSqlParameterSource().addValue("mailAddress", mailAddress).addValue("password",
 				password);
 		List<Administrator> administratorList = template.query(sql, param, ADMINISTRATOR_ROW_MAPPER);
 		if (administratorList.size() == 0) {
