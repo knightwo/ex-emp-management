@@ -31,10 +31,10 @@ public class AdministratorController {
 	private HttpSession session;
 
 	/**
-	 * administrator/insert.htmlにフォワードする.
+	 * 管理者登録画面にフォワードする.
 	 * 
 	 * @param form  リクエストスコープ
-	 * @return フォワード先
+	 * @return フォワード先（管理者登録画面）
 	 */
 	@GetMapping("/toInsert")
 	public String toInsert(InsertAdministratorForm form) {
@@ -46,7 +46,7 @@ public class AdministratorController {
 	 * 管理者情報を登録する.
 	 * 
 	 * @param form 管理者登録するための情報
-	 * @return リダイレクト先
+	 * @return リダイレクト先（管理者登録画面）
 	 */
 	@PostMapping("/insert")
 	public String insert(InsertAdministratorForm form) {
@@ -57,10 +57,10 @@ public class AdministratorController {
 	}
 	
 	/**
-	 *  administrator/loginにフォワードする.
+	 *  ログイン画面にフォワードする.
 	 * 
 	 * @param form リクエストスコープ
-	 * @return フォワード先
+	 * @return ログイン画面
 	 */
 	@GetMapping("/")
 	public String toLogin(LoginForm form) {
@@ -72,7 +72,7 @@ public class AdministratorController {
 	 * 
 	 * @param form ログインするための情報
 	 * @param model リクエストパラメータに保存するためのモデルオブジェクト
-	 * @return フォワード先（ログイン画面）
+	 * @return 従業員一覧画面にリダイレクト（エラーの場合は、ログイン画面にフォワード先）　
 	 */
 	@PostMapping("/login")
 	public String login(LoginForm form,Model model) {
@@ -83,7 +83,7 @@ public class AdministratorController {
 			return "administrator/login";
 		}
 	
-		session.setAttribute("administrator", administrator.getName());
+		session.setAttribute("administratorName", administrator.getName());
 		return "redirect:/employee/showList";
 		
 	}

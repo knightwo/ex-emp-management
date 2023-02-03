@@ -36,13 +36,21 @@ public class EmployeeController {
 		model.addAttribute("employeeList", employeeList);
 		return "employee/list";
 	}
-	
+
+	/**
+	 * 従業員情報を検索する。
+	 * 
+	 * @param id    検索するためのID
+	 * @param model リクエストパラメータに保存するためのModelオブジェクト
+	 * @param form  従業員情報を受け取るためのフォーム
+	 * @return フォワード先（従業員詳細画面）
+	 */
 	@GetMapping("/showDetail")
-	public String showDetail(String id,Model model,UpdateEmployeeForm form) {
+	public String showDetail(String id, Model model, UpdateEmployeeForm form) {
 		Employee employee = employeeService.showDetail(form.getIntId());
 		model.addAttribute("employee", employee);
 		return "employee/detail";
-		
+
 	}
 
 }
