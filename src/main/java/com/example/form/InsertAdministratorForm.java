@@ -1,7 +1,9 @@
 package com.example.form;
 
 /**
- * @author ka711 管理者情報登録時に使用するフォーム
+ * 管理者情報登録時に使用するフォーム.
+ * 
+ * @author ka711 
  */
 public class InsertAdministratorForm {
 	/** 名前 */

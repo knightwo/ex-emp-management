@@ -10,7 +10,9 @@ import com.example.form.InsertAdministratorForm;
 import com.example.service.AdministratorService;
 
 /**
- * @author ka711 管理者情報を操作するコントローラ
+ * 管理者情報を操作するコントローラ.
+ * 
+ * @author ka711 
  *
  */
 @Controller
@@ -20,15 +22,14 @@ public class AdministratorController {
 	private AdministratorService administratorService;
 
 	/**
-	 * administrator/insert.htmlにフォワードする
+	 * administrator/insert.htmlにフォワードする.
 	 * 
 	 * @param form  管理者登録するための情報
 	 * @param model リクエストスコープ
 	 * @return フォワード先
 	 */
 	@GetMapping("/toInsert")
-	public String toInsert(InsertAdministratorForm form, Model model) {
-		model.addAttribute("form", form);
+	public String toInsert(InsertAdministratorForm form) {
 		return "administrator/insert";
 
 	}

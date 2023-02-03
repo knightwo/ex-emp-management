@@ -13,12 +13,14 @@ import org.springframework.stereotype.Repository;
 import com.example.domain.Employee;
 
 /**
- * @author ka711 employeesテーブルを操作するリポジトリ
+ * employeesテーブルを操作するリポジトリ.
+ * 
+ * @author ka711 
  */
 @Repository
 public class EmployeeRepository {
 	/**
-	 * employeeオブジェクトを生成するローマッパー
+	 * employeeオブジェクトを生成するローマッパー.
 	 */
 	private static final RowMapper<Employee> EMPLOYEE_ROW_MAPPER = (rs, i) -> {
 		Employee employee = new Employee();
@@ -41,7 +43,7 @@ public class EmployeeRepository {
 	private NamedParameterJdbcTemplate template;
 
 	/**
-	 * 従業員一覧情報を入社日の降順で出力します
+	 * 従業員一覧情報を入社日の降順で出力します.
 	 * 
 	 * @return 全従業員一覧（従業員が存在しない場合は、0件の従業員リストを返します）
 	 */
@@ -52,10 +54,10 @@ public class EmployeeRepository {
 	}
 
 	/**
-	 * 主キー検索を行います
+	 * 主キー検索を行います.
 	 * 
 	 * @param id 検索したい主キー
-	 * @return
+	 * @return 従業員情報
 	 */
 	public Employee load(Integer id) {
 		String sql = "SELECT id,name,image,gender,hire_date,mail_address,zip_code,address,telephone,salary,characteristics,dependents_count FROM employees WHERE id = :id";

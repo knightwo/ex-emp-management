@@ -13,12 +13,14 @@ import org.springframework.stereotype.Repository;
 import com.example.domain.Administrator;
 
 /**
- * @author ka711 administratorsテーブルを操作するリポジトリ
+ * administratorsテーブルを操作するリポジトリ.
+ * 
+ * @author ka711 
  */
 @Repository
 public class AdministratorRepository {
 	/**
-	 * administratorオブジェクトを生成するローマッパー
+	 * administratorオブジェクトを生成するローマッパー.
 	 */
 	private static final RowMapper<Administrator> ADMINISTRATOR_ROW_MAPPER = (rs, i) -> {
 		Administrator administrator = new Administrator();
@@ -33,7 +35,7 @@ public class AdministratorRepository {
 	private NamedParameterJdbcTemplate template;
 
 	/**
-	 * 管理者情報を登録します
+	 * 管理者情報を登録します.
 	 * 
 	 * @param administrator 管理者情報
 	 */
@@ -44,7 +46,7 @@ public class AdministratorRepository {
 	}
 
 	/**
-	 * メールアドレスとパスワードが一致する従業員情報を検索します
+	 * メールアドレスとパスワードが一致する従業員情報を検索します.
 	 * 
 	 * @param mailAddres 照合したいメールアドレス
 	 * @param password   照合したいパスワード

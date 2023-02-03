@@ -7,7 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.repository.AdministratorRepository;
 
 /**
- * @author ka711 管理者情報を操作するサービス
+ * 管理者情報を操作するサービス.
+ * 
+ * @author ka711 
  */
 @Service
 @Transactional
