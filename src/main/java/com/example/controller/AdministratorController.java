@@ -82,10 +82,20 @@ public class AdministratorController {
 			model.addAttribute("alertMessage", alertMessage);
 			return "administrator/login";
 		}
-	
 		session.setAttribute("administratorName", administrator.getName());
 		return "redirect:/employee/showList";
-		
+	}
+	
+	/**
+	 *ログアウトをする.
+	 * 
+	 * @param form ログイン情報のフォーム
+	 * @return ログイン画面にリダイレクト
+	 */
+	@GetMapping("/logout")
+	public String logout(LoginForm form) {
+		session.invalidate();
+		return "redirect:/";
 	}
 
 }
