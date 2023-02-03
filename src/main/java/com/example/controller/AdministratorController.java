@@ -67,6 +67,13 @@ public class AdministratorController {
 		return "administrator/login";
 	}
 	
+	/**
+	 * ログイン処理を行う.
+	 * 
+	 * @param form ログインするための情報
+	 * @param model リクエストパラメータに保存するためのモデルオブジェクト
+	 * @return フォワード先（ログイン画面）
+	 */
 	@PostMapping("/login")
 	public String login(LoginForm form,Model model) {
 		Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());

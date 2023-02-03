@@ -1,7 +1,9 @@
 package com.example.domain;
 
 /**
- * @author ka711 管理者を表すドメイン
+ * 管理者を表すドメイン.
+ * 
+ * @author ka711 
  *
  */
 public class Administrator {
