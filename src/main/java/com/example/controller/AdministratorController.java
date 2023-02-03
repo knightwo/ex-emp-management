@@ -14,7 +14,7 @@ import com.example.service.AdministratorService;
  *
  */
 @Controller
-@RequestMapping("")
+@RequestMapping("/")
 public class AdministratorController {
 	@Autowired
 	private AdministratorService administratorService;
