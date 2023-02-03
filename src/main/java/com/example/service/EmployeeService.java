@@ -20,16 +20,16 @@ import com.example.repository.EmployeeRepository;
 public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
-	
+
 	/**
 	 * 従業員情報を全権取得する.
 	 * 
 	 * @return 全従業員の情報
 	 */
-	public List<Employee> showList(){
+	public List<Employee> showList() {
 		return employeeRepository.findAll();
 	}
-	
+
 	/**
 	 * 主キー検索し、従業員情報を取得する.
 	 * 
@@ -38,6 +38,15 @@ public class EmployeeService {
 	 */
 	public Employee showDetail(Integer id) {
 		return employeeRepository.load(id);
+	}
+
+	/**
+	 * 従業員情報を更新する.
+	 * 
+	 * @param employee 従業員情報
+	 */
+	public void update(Employee employee) {
+		employeeRepository.update(employee);
 	}
 
 }

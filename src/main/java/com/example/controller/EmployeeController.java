@@ -38,7 +38,7 @@ public class EmployeeController {
 	}
 
 	/**
-	 * 従業員情報を検索する。
+	 * 従業員情報を検索する.
 	 * 
 	 * @param id    検索するためのID
 	 * @param model リクエストパラメータに保存するためのModelオブジェクト
