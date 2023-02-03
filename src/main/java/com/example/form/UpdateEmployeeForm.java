@@ -16,6 +16,10 @@ public class UpdateEmployeeForm {
 	public String getId() {
 		return id;
 	}
+	
+	public int getIntId() {
+		return Integer.parseInt(id);
+	}
 
 	public void setId(String id) {
 		this.id = id;
@@ -23,6 +27,10 @@ public class UpdateEmployeeForm {
 
 	public String getDependentsCount() {
 		return dependentsCount;
+	}
+	
+	public int getIntDependentsCount() {
+		return Integer.parseInt(dependentsCount);
 	}
 
 	public void setDependentsCount(String dependentsCount) {
