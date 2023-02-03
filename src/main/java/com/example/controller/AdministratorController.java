@@ -22,7 +22,7 @@ public class AdministratorController {
 	/**
 	 * administrator/insert.htmlにフォワードする
 	 * 
-	 * @param form  従業員登録するための情報
+	 * @param form  管理者登録するための情報
 	 * @param model リクエストスコープ
 	 * @return フォワード先
 	 */
