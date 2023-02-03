@@ -3,8 +3,7 @@ package com.example.domain;
 import java.util.Date;
 
 /**
- * @author ka711 
- * 従業員を表すドメイン
+ * @author ka711 従業員を表すドメイン
  *
  */
 public class Employee {

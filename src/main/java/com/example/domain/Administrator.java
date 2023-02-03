@@ -1,21 +1,20 @@
 package com.example.domain;
 
 /**
- * @author ka711
- * 管理者を表すドメイン
+ * @author ka711 管理者を表すドメイン
  *
  */
 public class Administrator {
 
 	/** ID */
 	private Integer id;
-	
+
 	/** 名前 */
 	private String name;
-	
+
 	/** メールアドレス */
 	private String mailAddress;
-	
+
 	/** パスワード */
 	private String password;
 
