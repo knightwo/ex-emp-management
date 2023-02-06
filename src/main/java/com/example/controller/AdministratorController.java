@@ -93,7 +93,7 @@ public class AdministratorController {
 	 * @return ログイン画面にリダイレクト
 	 */
 	@GetMapping("/logout")
-	public String logout(LoginForm form) {
+	public String logout() {
 		session.invalidate();
 		return "redirect:/";
 	}
